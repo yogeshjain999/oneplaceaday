@@ -1,4 +1,10 @@
-%span.st_sharethis{st_url: 'http://sharethis.com', st_title: 'SHaring is great ..!!'}
+//%span.st_sharethis{st_url: 'http://sharethis.com', st_title: 'SHaring is great ..!!'}
+
+- content_for :head do
+  %meta{property: 'og:title',content: "#{@post.title}"}
+  %meta{property: 'og:url', content:'https://happyplace-staging.herokuapp.com/posts/1'}
+  %meta{property: 'og:image', content: "#{@post.photo.url}"}
+  %meta{property: 'og:description', content: "#{@post.description.truncate(300)}"}
 
 .row
   .col-md-1
